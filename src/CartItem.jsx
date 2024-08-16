@@ -54,6 +54,10 @@ const CartItem = ({ onContinueShopping }) => {
       <h2 style={{ color: "black" }}>
         Total Cart Amount: ${calculateTotalAmount()}
       </h2>
+      <h2 style={{ color: "black" }}>Unique Items: {cart.length}</h2>
+      <h2 style={{ color: "black" }}>
+        Total Items: {cart.reduce((acc, curr) => acc + curr.quantity, 0)}
+      </h2>
       <div>
         {cart.map((item) => (
           <div className="cart-item" key={item.name}>
