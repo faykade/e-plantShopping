@@ -338,12 +338,19 @@ function ProductList() {
                   ></path>
                 </svg>
               </h1>
+              {cart.length > 0 && (
+                <span
+                  style={{
+                    fontSize: "20px",
+                    position: "absolute",
+                    top: "22px",
+                    left: "30px",
+                  }}
+                >
+                  {cart.length}
+                </span>
+              )}
             </a>
-            {cart.length > 0 && (
-              <span style={{ position: "absolute", top: "22px", left: "30px" }}>
-                {cart.length}
-              </span>
-            )}
           </div>
         </div>
       </div>
